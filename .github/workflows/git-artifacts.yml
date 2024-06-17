@@ -168,7 +168,7 @@ jobs:
           echo "PACKAGER=$USER_NAME <$USER_EMAIL>" >> $GITHUB_ENV
       - uses: git-for-windows/setup-git-for-windows-sdk@v1
         with:
-          flavor: build-installers
+          flavor: full
           architecture: ${{env.architecture}}
       - name: Create artifact build matrix
         uses: actions/github-script@v7
@@ -336,7 +336,7 @@ jobs:
           path: bundle-artifacts
       - uses: git-for-windows/setup-git-for-windows-sdk@v1
         with:
-          flavor: build-installers
+          flavor: full
           architecture: ${{env.ARCHITECTURE}}
       - name: Configure user
         run:
